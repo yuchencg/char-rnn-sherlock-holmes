@@ -2,7 +2,7 @@
 
 A PyTorch implementation of character-level LSTM text generation, trained on the complete Sherlock Holmes corpus by Arthur Conan Doyle. This project compares optimizer performance and learning rate schedules for character-level recurrent language models.
 
-The architecture and training conventions are based on [torch-rnn](https://github.com/jcjohnson/torch-rnn) by Justin Johnson, which itself is a cleaner re-implementation of Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn). Our implementation ports the core ideas to PyTorch, retaining torch-rnn's learned character embeddings, contiguous batch streaming, and checkpoint-based model selection.
+The architecture and training conventions are based on [torch-rnn](https://github.com/jcjohnson/torch-rnn) by Justin Johnson, which is a cleaner re-implementation of Andrej Karpathy's [char-rnn](https://github.com/karpathy/char-rnn). This implementation ports the core ideas to PyTorch, retaining torch-rnn's learned character embeddings, contiguous batch streaming, and checkpoint-based model selection.
 
 ## Overview
 
@@ -107,13 +107,12 @@ Six configurations tested with Adam for 20 epochs:
 
 Configuration D extended to 30 epochs achieves **best validation loss = 1.2368**.
 
-![Hyperparameter Comparison](hyperparameter_comparison.png)
 
 ### Sample Generated Text
 
 Config D, 30 epochs, temperature 0.5, primed with "Sherlock Holmes walked into the room":
 
-> Sherlock Holmes walked into the room. "It is a too as the door of the man when you will be an examination of the house," said he. "We was a senses which he is not to lose the constant of the house of the danger. I have to the train and a scleating of the moment of the good brow man. We can see that we have been done."
+> Sherlock Holmes walked into the room. "It is a too as the door of the man when you will be an examination of the house," said he. "We was a senses which he is not to lose the constant of the house of the danger. I have to the train and a scleating of the moment of the good brow man. We can see that we have been done." "The death and started in by the corner of the constant. I have not made the man to my station.....ith a man who is a strange visitor of the constant of the note of the long eyes and his easy detective street.
 
 The model captures dialogue formatting, character references, and the narrative rhythm of the Sherlock Holmes stories, though sentence-level coherence is limited.
 
