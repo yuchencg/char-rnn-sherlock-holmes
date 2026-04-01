@@ -1,4 +1,4 @@
-# Character-Level Language Model: Sherlock Holmes
+# Character-Level RNN Language Model: Sherlock Holmes
 
 A PyTorch implementation of character-level LSTM text generation, trained on the complete Sherlock Holmes corpus by Arthur Conan Doyle. This project compares optimizer performance and learning rate schedules for character-level recurrent language models.
 
